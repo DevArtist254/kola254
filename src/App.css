@@ -1,42 +1,329 @@
-.App {
+.youtube {
+  colors: #D16E8D;
+}
+
+.articles {
+  colors: #FFAC83;
+}
+
+.community {
+  colors: #3F78C9;
+}
+
+.courses {
+  colors: #49C4A3;
+}
+
+/*
+Media Query Manager
+
+Breakpoints : Screens         : nickname
+
+0-600 px    : phone           : phone
+600-900 px  : tablet-portrait : tab-port
+900-1200 px : tablet-landscape: tab-land
+1200-1800 px: normal becoz its desktop first method
+1800px +    : Big Monitor     : big-screen
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.white {
+  color: #efe3b8;
+}
+
+.dark {
+  color: #2b002d;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  width: 100%;
+}
+.main__cont {
+  background-color: #2b002d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+.main__cont--text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  padding-left: 9rem;
+}
+.main__cont--image {
+  width: 50%;
+  height: 100%;
+}
+.main__about {
+  background-color: #efe3b8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+.main__about--image {
+  width: 50%;
+  height: 100%;
+  background-image: url("./src/assests/images/hair-1.jpg");
+  background-size: 120% 100%;
+  background-repeat: no-repeat;
+}
+.main__about--textBox {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__shop {
+  background-color: #2b002d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.main__shop--shopContent {
+  width: 90%;
+  height: 75%;
+}
+.main__shop--header {
+  width: 453px;
+  margin-bottom: 5rem;
+}
+.main__shop--cards {
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main__fav {
+  background-color: #efe3b8;
+  padding-top: 14rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.main__fav--header {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__fav--cards {
+  width: 45%;
+  height: 100%;
+}
+.main__comments {
+  background-color: rgba(166, 96, 58, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.main__comments--video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+}
+.main__comments--textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 90%;
+}
+.main__contacts {
+  background-color: #efe3b8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100vh;
+}
+.main__contacts--cta, .main__contacts--address {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding-left: 9rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contacts__title {
+  width: 315px;
+  height: 57px;
+  margin-bottom: 6rem;
+}
+.contacts__cta {
+  width: 601px;
+  height: 450px;
+}
+.contacts__address {
+  margin-bottom: 1.2rem;
+}
+.contacts__address--title {
+  width: 200px;
+  height: 31px;
+  margin-bottom: 0.6rem;
+}
+.contacts__address--text {
+  width: 422px;
+  height: 19px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-sec {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+.card-sec__img {
+  width: 253px;
+  height: 193px;
+}
+.card-sec__textBox {
+  padding-left: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-sec__textBox--text {
+  width: 320px;
+  height: 114px;
+  margin-bottom: 0.8rem;
+}
+
+.mfHeader {
+  width: 367px;
+  height: 133px;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-main__img {
+  width: 390px;
+  height: 362px;
+  margin-bottom: 0.8rem;
+}
+.card-main__header {
+  width: 171px;
+  margin-bottom: 0.8rem;
+}
+.card-main__text {
+  width: 273px;
+}
+
+.pri-textBox {
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.pri-btn {
+  width: 270px;
+  height: 86px;
+  margin-bottom: 8rem;
+  border-radius: 10px;
+  background-color: #efe3b8;
+  border: 1px solid #efe3b8;
+  cursor: pointer;
+}
+
+.tbHeader {
+  width: 380px;
+  margin-bottom: 5rem;
+}
+
+.tbText {
+  width: 592px;
+  height: 320px;
+}
+
+#error-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.head-main {
+  font-family: "Alice", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-header {
+  font-family: "Alice", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.head-comment {
+  font-family: "Alice", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
 }
+
+.p-mid {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.p-card {
+  font-family: "Poppins", sans-serif;
+  font-style: light;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=App.css.map */
