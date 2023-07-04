@@ -5,6 +5,10 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './error-page';
 import LandingPage from './lp';
+import Cart from "./cart";
+import Login from "./login";
+import FrontalWigs from "./frontal-wigs";
+import ClosureWigs from "./closure-wigs";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +19,22 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <LandingPage />
+      },
+      {
+        path: "/frontal-wigs",
+        element: <FrontalWigs />
+      },
+      {
+        path: "/closure-wigs",
+        element: <ClosureWigs />
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/cart",
+        element: <Cart />
       }
     ])
   }
