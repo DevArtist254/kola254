@@ -81,13 +81,22 @@ html {
   margin: 0 auto;
 }
 
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .card {
   width: 277px;
   height: 459px;
+  border: 1px solid #000;
+  margin-bottom: 5rem;
 }
 .card__pri {
   width: 100%;
-  height: 90%;
+  height: 95%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

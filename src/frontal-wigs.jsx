@@ -19,6 +19,62 @@ function FrontalWigs() {
           <p>Details</p>
           <p>Add to cart</p>
         </div>
+       </div>
+       <div className='card'>
+        <div className='card__pri'>
+          <h2>Heading</h2>
+
+          <div className='card__textBox'>
+            <h3>Sub Heading</h3>
+            <div>Stars</div>
+          </div>
+        </div>
+        <div className='card__links'>
+          <p>Details</p>
+          <p>Add to cart</p>
+        </div>
+       </div> 
+       <div className='card'>
+        <div className='card__pri'>
+          <h2>Heading</h2>
+
+          <div className='card__textBox'>
+            <h3>Sub Heading</h3>
+            <div>Stars</div>
+          </div>
+        </div>
+        <div className='card__links'>
+          <p>Details</p>
+          <p>Add to cart</p>
+        </div>
+       </div> 
+       <div className='card'>
+        <div className='card__pri'>
+          <h2>Heading</h2>
+
+          <div className='card__textBox'>
+            <h3>Sub Heading</h3>
+            <div>Stars</div>
+          </div>
+        </div>
+        <div className='card__links'>
+          <p>Details</p>
+          <p>Add to cart</p>
+        </div>
+       </div> 
+       <div className='card'>
+        <div className='card__pri'>
+          <h2>Heading</h2>
+
+          <div className='card__textBox'>
+            <h3>Sub Heading</h3>
+            <div>Stars</div>
+          </div>
+        </div>
+        <div className='card__links'>
+          <p>Details</p>
+          <p>Add to cart</p>
+        </div>
        </div> 
       </div>
     </div>
