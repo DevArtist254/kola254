@@ -1,4 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
+import CartNav from "./components/nav-comp/cart.comp";
 
 const App = () => {
  
@@ -10,7 +11,8 @@ const App = () => {
             <Link className="nav--link link" to="/frontal-wigs">Frontal wigs</Link>
             <Link className="nav--link link" to="/closure-wigs">Closure wigs</Link>
             <Link className="nav--link link" to="/login">login</Link>
-            <Link className="nav--link link" to="/cart">Cart</Link>
+            <CartNav />
+            {/* <Link className="" to="/cart"></Link> */}
           </div>
         </nav>
         <div>
