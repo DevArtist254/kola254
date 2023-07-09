@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+//State
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor} from './redux/store';
+
+//Router
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import './index.css';
 import App from './App';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './pages/error-page';
 import LandingPage from './pages/landing-page';
 import Cart from "./pages/cart";
@@ -44,6 +52,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+   <Provider store={store}>
+    <PersistGate persistor={persistor}>
+     <RouterProvider router={router} />
+    </PersistGate>
+   </Provider>
   </React.StrictMode>
 );
