@@ -1,5 +1,9 @@
 import React from 'react'
 
+function addToCart(e) {
+  console.log(`Yes`);
+}
+
 function FrontalWigs() {
   return (
     <div className='main'>
@@ -17,7 +21,7 @@ function FrontalWigs() {
         </div>
         <div className='card__links'>
           <p>Details</p>
-          <p>Add to cart</p>
+          <button onClick={addToCart()}>Add to cart</button>
         </div>
        </div>
        <div className='card'>

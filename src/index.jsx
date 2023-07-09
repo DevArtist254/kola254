@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from './error-page';
-import LandingPage from './lp';
-import Cart from "./cart";
-import Login from "./login";
-import FrontalWigs from "./frontal-wigs";
-import ClosureWigs from "./closure-wigs";
+import ErrorPage from './pages/error-page';
+import LandingPage from './pages/landing-page';
+import Cart from "./pages/cart";
+import Login from "./pages/login";
+import FrontalWigs from "./pages/frontal-wigs";
+import ClosureWigs from "./pages/closure-wigs";
 
 const router = createBrowserRouter([
   {
