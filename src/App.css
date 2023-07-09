@@ -81,31 +81,166 @@ html {
   margin: 0 auto;
 }
 
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.4rem;
+  text-decoration: none;
+  font-size: 18px;
+  color: #2b002d;
+  cursor: pointer;
+}
+
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+
+.card-heading {
+  font-family: "Alice", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  text-align: center;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.card-subHeader {
+  font-family: "Alice", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.card-price {
+  font-family: "Poppins", sans-serif;
+  font-style: thin;
+  font-weight: 200;
+  font-size: 27px;
+  margin-bottom: 1rem;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  display: none;
+}
+
+.card:hover .card-price,
+.card-full:hover .card-price {
+  display: inline-block;
+}
+
+.card-addToCart-btn {
+  font-family: "Poppins", sans-serif;
+  font-style: thin;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  color: #2b002d;
+  text-decoration: underline;
+  display: none;
+  cursor: pointer;
+}
+
+.card:hover .card-addToCart-btn,
+.card-full:hover .card-addToCart-btn {
+  display: inline-block;
 }
 
 .card {
-  width: 277px;
-  height: 459px;
-  border: 1px solid #000;
-  margin-bottom: 5rem;
+  width: 18%;
+  height: 52vh;
 }
-.card__pri {
-  width: 100%;
-  height: 95%;
+
+.card:hover {
+  height: 46vh;
+  /* property name | duration | easing function */
+  transition: height 1s ease-in-out;
+}
+
+.card-full {
+  width: 23%;
+  height: 80vh;
+  margin-right: 3rem;
+}
+
+.card-full:hover {
+  height: 75vh;
+  /* property name | duration | easing function */
+  transition: height 1s ease-in-out;
+}
+
+.card__picture,
+.card-full__picture {
+  height: 90%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-}
-.card__links {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
+}
+
+.card__picture--header,
+.card-full__picture--header {
+  height: 72px;
+}
+
+.card__picture--sub-header,
+.card-full__picture--sub-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.card__subHeader,
+.card-full__subHeader {
+  display: inline-block;
+}
+
+.card__link,
+.card-full__link {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  visibility: hidden;
+}
+
+.card__header,
+.card-full__header {
+  height: 72px;
+  visibility: hidden;
+}
+
+.card:hover .card__header,
+.card-full:hover .card__header, .card:hover .card-full__header,
+.card-full:hover .card-full__header {
+  visibility: visible;
+  /* property name | duration | easing function */
+  transition: visibility 1s ease-in-out;
+}
+
+.card:hover .card__link,
+.card-full:hover .card__link, .card:hover .card-full__link,
+.card-full:hover .card-full__link {
+  visibility: visible;
+  /* property name | duration | easing function */
+  transition: visibility 1s ease-in-out;
+}
+
+.card:hover .card__subHeader,
+.card-full:hover .card__subHeader, .card:hover .card-full__subHeader,
+.card-full:hover .card-full__subHeader {
+  display: none;
+  /* property name | duration | easing function */
 }
 
 .main {
