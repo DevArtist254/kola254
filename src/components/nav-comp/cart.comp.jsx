@@ -21,9 +21,9 @@ function CartNav() {
                 <div className="dropdown__tours--content">
                   <h4 className="dropdown__tours--header">Wig hair</h4>
                   <p className="dropdown__tours--total">
-                    Quantity 1
+                    Pcs: 1
                   </p>
-                  <p className="dropdown__tours--total">Price $24</p>
+                  <p className="dropdown__tours--total">$24</p>
                 </div>
                 <img src={x} alt="cancel" className="dropdown__tours--cancel" />
               </div>
