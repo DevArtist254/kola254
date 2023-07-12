@@ -1,5 +1,7 @@
 const productTypes = {
-    LOAD_PRODUCT: 'LOAD_PRODUCT',
-}
+  start: 'LOAD_PRODUCT',
+  success: 'SUCCESS_PRODUCT',
+  fail: 'FAIL_PRODUCT',
+};
 
 export default productTypes;

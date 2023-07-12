@@ -1,18 +1,33 @@
-import productTypes from './product.types'
+import productTypes from './product.types';
 
 const initialState = {
-    product: null,
-}
+  frontalWigsProducts: [],
+  isLoading: false,
+  errMessage: undefined,
+};
 
-const productReducer = (state = initialState, { type, payload }) => {
+const productReducer = (state = initialState, {type, payload}) => {
   switch (type) {
-  case productTypes.LOAD_PRODUCT:
-    return { ...state, product: payload }
+    case productTypes.start:
+      return {...state, isLoading: true};
 
-  default:
-    return state
+    case productTypes.success:
+      return {
+        ...state,
+        isLoading: false,
+        frontalWigsProducts: payload,
+      };
+
+    case productTypes.fail:
+      return {
+        ...state,
+        isLoading: false,
+        errMessage: payload,
+      };
+
+    default:
+      return state;
   }
-}
-
+};
 
 export default productReducer;

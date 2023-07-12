@@ -87,7 +87,8 @@ html {
   cursor: pointer;
 }
 
-.dropdown__tours--header, .dropdown__tours--total {
+.dropdown__tours--header,
+.dropdown__tours--total {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
@@ -199,13 +200,9 @@ html {
   justify-content: space-between;
 }
 
-.main {
-  padding-top: 190px;
-  width: 100%;
-}
-
 .content {
   width: 87%;
+  padding-top: 125px;
   margin: 0 auto;
 }
 
@@ -224,6 +221,7 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card-heading {
@@ -349,7 +347,8 @@ html {
 }
 
 .card:hover .card__header,
-.card-full:hover .card__header, .card:hover .card-full__header,
+.card-full:hover .card__header,
+.card:hover .card-full__header,
 .card-full:hover .card-full__header {
   visibility: visible;
   /* property name | duration | easing function */
@@ -357,7 +356,8 @@ html {
 }
 
 .card:hover .card__link,
-.card-full:hover .card__link, .card:hover .card-full__link,
+.card-full:hover .card__link,
+.card:hover .card-full__link,
 .card-full:hover .card-full__link {
   visibility: visible;
   /* property name | duration | easing function */
@@ -365,7 +365,8 @@ html {
 }
 
 .card:hover .card__subHeader,
-.card-full:hover .card__subHeader, .card:hover .card-full__subHeader,
+.card-full:hover .card__subHeader,
+.card:hover .card-full__subHeader,
 .card-full:hover .card-full__subHeader {
   display: none;
   /* property name | duration | easing function */
