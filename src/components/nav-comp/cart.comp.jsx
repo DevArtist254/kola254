@@ -1,32 +1,20 @@
 import React from 'react';
-import intro1 from '../../assests/images/hair-2.jpg';
-import x from '../../assests/images/x.png';
+import {
+  selectCartItem,
+  selectCartItemCount,
+  selectCartItemPriceSum,
+} from '../../redux/cart/cart.selector';
+import CartCards from '../card-comp/cartCards.comp';
+import {connect} from 'react-redux';
 
-function CartNav() {
+function CartNav({cartItems, cartItemsSum, itemCartCount}) {
   return (
     <div>
       <div className='dropdown'>
         <h2 className='dropdown__header'>Shop</h2>
-        <div
-          className='dropdown__tours'
-          // onClick={() => navTours(cartItem)}
-        >
-          <div className='dropdown__tours--placeHolder '></div>
-          <div
-            style={{
-              backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(${intro1})`,
-            }}
-            className='dropdown__tours--img'
-          ></div>
-          <div className='dropdown__tours--content'>
-            <h4 className='dropdown__tours--header'>Wig hair</h4>
-            <p className='dropdown__tours--total'>Pcs: 1</p>
-            <p className='dropdown__tours--total'>$24</p>
-          </div>
-          <img src={x} alt='cancel' className='dropdown__tours--cancel' />
-        </div>
+        <CartCards products={cartItems} />
 
-        <p className='dropdown__p'>Total : 247</p>
+        <p className='dropdown__p'>Total : {cartItemsSum}</p>
         <div
           className='dropdown__cta'
           // onClick={() => navRoute('/checkout')}
@@ -38,4 +26,10 @@ function CartNav() {
   );
 }
 
-export default CartNav;
+const mapStateToProps = (state) => ({
+  cartItems: selectCartItem(state),
+  itemCartCount: selectCartItemCount(state),
+  cartItemsSum: selectCartItemPriceSum(state),
+});
+
+export default connect(mapStateToProps)(CartNav);
