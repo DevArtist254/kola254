@@ -8,9 +8,6 @@ function FrontalWigs({loadFrontalWigsProducts, frontalWigsProducts}) {
     loadFrontalWigsProducts();
   }, [loadFrontalWigsProducts]);
 
-  function addToCart(e) {
-    console.log(`Yes`);
-  }
   return (
     <div className='main'>
       <div className='content'>
