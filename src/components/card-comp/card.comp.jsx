@@ -1,8 +1,10 @@
 import React from 'react';
 import Stars from './stars.comp';
 import intro1 from '../../assests/images/hair-2.jpg';
+import {addItemsToCart} from '../../redux/cart/cart.actions';
+import {connect} from 'react-redux';
 
-function Card({data}) {
+function Card({data, addItemsToCart}) {
   return (
     <div className='card-full'>
       <div
@@ -31,10 +33,16 @@ function Card({data}) {
       </div>
       <div className='card-full__link'>
         <p className='nav-link'>Details</p>
-        <p className='card-addToCart-btn'>Add to cart</p>
+        <p className='card-addToCart-btn' onClick={() => addItemsToCart(data)}>
+          Add to cart
+        </p>
       </div>
     </div>
   );
 }
 
-export default Card;
+const mapDispatchToProps = (dispatch) => ({
+  addItemsToCart: (item) => dispatch(addItemsToCart(item)),
+});
+
+export default connect(null, mapDispatchToProps)(Card);
