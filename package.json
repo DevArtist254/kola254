@@ -5,6 +5,7 @@
     "start:react": "vite --port 3000 --open",
     "dev": "vite --port 3000 --open",
     "build": "vite build",
+    "deploy": "firebase deploy",
     "serve": "vite preview",
     "watch-sass": "sass ./src/sass/main.scss ./src/App.css -w",
     "compile-sass": "node-sass sass/main.scss style/style.comp.css",
