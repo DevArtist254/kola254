@@ -5,4 +5,13 @@ dist-ssr
 *.local
 
 /src/assests
-/src/sass
+/src/firebase
+
+database.rules.json
+firebase.json
+
+.firebaserc
+
+/.firebase
+
+public

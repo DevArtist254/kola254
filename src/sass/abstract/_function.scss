@@ -1,0 +1,16 @@
+$colors : (
+    youtube : #D16E8D,
+    articles : #FFAC83,
+    community : #3F78C9,
+    courses : #49C4A3,
+);
+
+
+@each $name, $colors in $colors {
+    .#{$name} {
+        colors : $colors;
+    }
+}
+
+// .youtube {
+//   colors: #D16E8D; }
