@@ -18,7 +18,7 @@ function CartCard({data}) {
       <div className='dropdown__tours--content'>
         <h4 className='dropdown__tours--header'>{data.firstName}</h4>
         <p className='dropdown__tours--total'>Pcs: {data.pcs}</p>
-        <p className='dropdown__tours--total'>${data.price}</p>
+        <p className='dropdown__tours--total'>${data.price * data.pcs}</p>
       </div>
       <img src={x} alt='cancel' className='dropdown__tours--cancel' />
     </div>

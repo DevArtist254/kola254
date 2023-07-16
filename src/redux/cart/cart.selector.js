@@ -17,7 +17,7 @@ export const selectCartItemPriceSum = createSelector(
   [selectCartItem],
   (cartItems) =>
     cartItems.reduce(
-      (accPrice, cartItem) => accPrice + Number(cartItem.price),
+      (accPrice, cartItem) => accPrice + Number(cartItem.price) * cartItem.pcs,
       0
     )
 );
