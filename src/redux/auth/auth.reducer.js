@@ -1,7 +1,7 @@
 import {fetchCurrentUser} from './auth.types';
 
 const initialState = {
-  currentUser: {},
+  currentUser: null,
   isLoading: false,
   errMessage: undefined,
 };

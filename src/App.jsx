@@ -1,8 +1,10 @@
 import {Outlet, Link} from 'react-router-dom';
 import {Icon} from '@iconify/react';
 import CartNav from './components/nav-comp/cart.comp';
+import {connect} from 'react-redux';
+import UserInfo from './components/nav-comp/userinfo.comp';
 
-const App = () => {
+const App = ({currentUser}) => {
   return (
     <div>
       <nav className='nav'>
@@ -16,9 +18,16 @@ const App = () => {
           <Link className='nav--link link' to='/closure-wigs'>
             Closure wigs
           </Link>
-          <Link className='nav--link link' to='/login'>
-            login
-          </Link>
+          <>
+            {!currentUser ? (
+              <Link className='nav--link link' to='/login'>
+                login
+              </Link>
+            ) : (
+              <UserInfo user={currentUser} />
+            )}
+          </>
+
           <div className='nav--link link'>
             <Icon
               icon='iconoir:user-cart'
@@ -37,4 +46,8 @@ const App = () => {
   );
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(App);
