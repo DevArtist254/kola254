@@ -41,6 +41,5 @@
   },
   "description": "<h1 align=\"center\">   Vite Template React </h1>",
   "main": "vite.config.js",
-  "author": "",
-  "license": "ISC"
+  "author": ""
 }
